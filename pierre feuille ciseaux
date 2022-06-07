@@ -1,0 +1,67 @@
+#Programme 'Pierre, feuille, ciseaux : utilisateur vs pc ,avec enregistrement des points respectifs
+
+import random
+
+#1 demander à l'utilisateur de choisir son nom:
+utilisateur= (input('Quel nom choisissez-vous? '))
+user_victoires= 0
+pc_victoires =0
+nuls= 0
+
+#2 création d'une ligne d'exécution d'une boucle jusqu'à ce que l'utilisateur quitte le jeu
+
+while True: 
+    print(utilisateur, ' : ', user_victoires, "égalités : ",nuls, 'PC : ', pc_victoires)
+    coupJoueur=input("Entrez votre coup : (p)ierre, (f)euille, (c)iseaux ou (q)uitter :")
+    if coupJoueur=='q':
+       print('Vous avez quitter le jeu, mauviette!')
+       break
+    if coupJoueur !='p' and coupJoueur !='f' and coupJoueur !='c':
+       continue
+    
+#3 choix du coup de l'utilisateur avec 3 possibilités (pierre, feuille ou ciseaux) possibilité de revenir à #2 si l'utilisateur s'est trompé; ou possibilité de quitter et d'arrêter le jeu
+    if coupJoueur =='p':
+       print("Pierre contre ...", end=' ')
+    elif coupJoueur =='f':
+         print('Feuille contre..',  end=' ')
+    else:
+         print('Ciseaux contre...', end=' ')
+    
+#4 choix du coup de l'ordinateur entre les 3 mêmes possibilités, cela d'une façon aléatoire, en important la bibliothèque 'random', avec random.randint(1,3) 
+    randomNombre = random.randint(1,3)
+    if randomNombre == 1:
+       coupPC = 'p'
+       print("Pierre")
+    elif randomNombre == 2:       
+       coupPC = 'f'
+       print('Feuille')
+    else: 
+       coupPC = 'c'
+       print('Ciseaux')
+        
+#5 déterminer le gagnant de la partie
+#5.1 partie nulle
+    if coupJoueur == coupPC:
+       print('La partie est nulle')
+       nuls= nuls+1
+#5.2. Parties où j'ai gagné
+    elif coupJoueur =='p' and coupPC =='c':
+         print('Jai gagné')
+         user_victoires = user_victoires+1
+    elif coupJoueur =='f' and coupPC =='p':
+         print('Jai gagné')
+         user_victoires = user_victoires+1
+    elif coupJoueur =='c' and coupPC =='f':
+        print('Jai gagné')
+        user_victoires = user_victoires+1
+#5.3. Parties où j'ai perdu
+    elif coupJoueur =='p' and coupPC =='f':
+         print('Jai perdu')
+         pc_victoires= pc_victoires+1 
+    elif coupJoueur =='f' and coupPC =='c':
+         print('Jai perdu')
+         pc_victoires= pc_victoires+1
+    elif coupJoueur =='c' and coupPC =='p':
+         print('Jai perdu')
+         pc_victoires= pc_victoires+1
+        
