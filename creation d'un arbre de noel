@@ -1,0 +1,13 @@
+#Arbre de Noel: 
+    
+#étape 1: entrer le nombre de ligne
+h= int(input('Saisir le nombre de ligne : '))
+#2_ création de la ligne disant au programme de descendre du nombre de ligne renseigné dans (1)
+for i in range (1, h+1):
+#3 saisir la ligne qui va créer les espaces
+        for j in range (1, h-i+1): 
+            print('  '  , end= '')
+#4  Puis renseigner la ligne qui créera les étoiles
+        for j in range (1, 2*i-1+1):
+            print('* ' , end= '')
+        print()
