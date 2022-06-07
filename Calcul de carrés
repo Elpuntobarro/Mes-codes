@@ -1,0 +1,15 @@
+#Calculer le carré d'un nombre: 
+
+def carre (a):
+    return (a*a)
+
+
+#Afficher les k premiers carrés (de 0 à (k-1)²)
+
+
+
+def premiers_carre(k):
+    for (i) in range(k):
+       print(carre(i))
+    
+premiers_carre(10)
