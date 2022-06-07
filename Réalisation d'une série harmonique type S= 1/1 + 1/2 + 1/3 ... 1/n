@@ -1,0 +1,12 @@
+#Pour réaliser une série harmonique de type S= 1/1 + 1/2 + 1/3 ... 1/n
+
+#1 saisir le nombre 'n' du diviseur
+n = int(input('Saisir la valeur de n : '))
+#2 saisir le chiffre de départ de la fonction 'S'
+S=0
+#3  saisir la ligne qui va créer la condition de l'incrémentation de i (ici 'n')
+for i in range(1, n+1):
+#4 Saisir ensuite l'opération qui sera effectuée si la condition est valide (ici : réaliser S+1/i)
+    S=S+1/i
+    #5 saisir le résultat de la série harmonique une fois 'n' connu
+print('La somme est : ',format(S, '.2f'))         #pour 2 chiffres après la virgule, tapez format() avant la valeur, puis entrer le nb de chiffres: ici 2 avec '.2f'
