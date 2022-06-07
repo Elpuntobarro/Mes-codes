@@ -1,0 +1,23 @@
+#Programme qui demande le rayon d'une sphère puis qui calcule son volume
+
+#1 saisir la commande demandant le rayon d'une sphère: 
+rayon= float(input(('Saisir la valeur du rayon de la sphère : ')))
+p=3.14
+volume= (4*p*(rayon**3))/3
+print('Le volume est égal à :',format(volume, '.2f'))
+    
+
+
+
+#On peut aussi importer le module 'math' au lieu de saisir manuellement le nombre pi, en faisant 'import'
+
+
+#1 importer le module math
+import math
+
+#2 saisir la commande demandant le rayon d'une sphère: 
+rayon= float(input(('Saisir la valeur du rayon de la sphère : ')))
+#3 créer la ligne de calcul du volume avec l'import math.pi :
+volume= (4*math.pi*(rayon**3))/3
+#4 terminer en demandant l'écriture du résultat du calcul du volume, ici avec 2 chiffres après la virgule:
+print('Le volume est égal à :',format(volume, '.2f'))
